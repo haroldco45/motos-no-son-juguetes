@@ -1,0 +1,6 @@
+Ponga aqui fotos (.jpg) y videos (.mp4) reales y agreguelos a media.json asi:
+[
+  {"tipo":"foto","src":"media/operativo-transito.jpg","es":"Texto en español","en":"English caption"},
+  {"tipo":"video","src":"media/reel-1.mp4","es":"Texto en español","en":"English caption"}
+]
+La seccion "Mírelo con sus ojos" aparece sola cuando media.json tiene algo.

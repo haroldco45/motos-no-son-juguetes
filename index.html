@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>No Son Juguetes · Caucasia</title>
+<meta name="description" content="Alerta para padres de familia de Caucasia: las motos eléctricas no son juguetes de Navidad. Ley 2486 de 2025.">
+<meta name="theme-color" content="#c81020">
+<meta property="og:title" content="SEÑOR PADRE: LAS MOTOS ELÉCTRICAS NO SON JUGUETES">
+<meta property="og:description" content="Antes de regalarla en Navidad, mire lo que dice la ley y lo que ya pasó. Caucasia, Antioquia.">
+<meta property="og:image" content="foto-nino-moto.jpg">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--red:#c81020;--red2:#ff1e2e;--yel:#ffd400;--blk:#0b0b0d;--ink:#141417;--wht:#fff;--mute:#b9b9c2;--disp:Anton,"Arial Narrow",Impact,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--blk);color:var(--wht);overflow-x:hidden;line-height:1.45}
+body.en .es,body:not(.en) .en{display:none!important}
+h1,h2,h3,.big{font-family:var(--disp);font-weight:400;letter-spacing:.5px;text-transform:uppercase;line-height:1}
+a{color:var(--yel)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+
+/* barra superior */
+.top{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;background:rgba(11,11,13,.85);backdrop-filter:blur(8px);border-bottom:3px solid var(--red)}
+.top b{font-family:var(--disp);font-weight:400;letter-spacing:1px;font-size:18px}
+.top b span{color:var(--red2)}
+.lang{display:flex;border:2px solid var(--wht);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;color:var(--wht);font:800 13px Inter;padding:6px 12px;cursor:pointer}
+.lang button.on{background:var(--wht);color:var(--blk)}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;padding:90px 0 40px;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:-10%;background:url(foto-nino-moto.jpg) center/cover;filter:blur(14px) saturate(1.4) brightness(.35);z-index:-2;animation:drift 18s ease-in-out infinite alternate}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 40%,transparent 0 30%,rgba(200,16,32,.55) 75%);z-index:-1;animation:siren 1.2s steps(2) infinite}
+@keyframes drift{to{transform:scale(1.12) translate(2%,-2%)}}
+@keyframes siren{50%{background:radial-gradient(circle at 50% 40%,transparent 0 30%,rgba(10,30,200,.45) 75%)}}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:34px;align-items:center}
+.kicker{display:inline-block;background:var(--yel);color:var(--blk);font:900 14px Inter;letter-spacing:2px;text-transform:uppercase;padding:6px 12px;transform:rotate(-2deg);margin-bottom:16px}
+.hero h1{font-size:clamp(44px,8vw,96px)}
+.hero h1 .r{color:var(--red2);display:block;text-shadow:0 0 30px rgba(255,30,46,.6)}
+.hero p.lead{font-size:clamp(17px,2.2vw,22px);margin:18px 0 26px;max-width:600px;color:#eee}
+.flyer{width:100%;border:6px solid var(--wht);box-shadow:0 30px 80px rgba(0,0,0,.7),0 0 0 3px var(--red);transform:rotate(3deg);animation:shake 6s ease-in-out infinite}
+@keyframes shake{0%,90%,100%{transform:rotate(3deg)}92%{transform:rotate(1deg) translateX(-4px)}94%{transform:rotate(5deg) translateX(4px)}96%{transform:rotate(2deg)}}
+.count{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}
+.count div{background:rgba(0,0,0,.6);border:2px solid var(--red2);padding:10px 14px;min-width:84px;text-align:center}
+.count b{display:block;font:400 42px var(--disp)}
+.count small{font:800 11px Inter;letter-spacing:1.5px;text-transform:uppercase;color:var(--mute)}
+.count-lbl{font:900 14px Inter;letter-spacing:1px;text-transform:uppercase;color:var(--yel);margin-bottom:8px}
+.btn{display:inline-block;background:var(--red);color:var(--wht);font:900 16px Inter;text-transform:uppercase;letter-spacing:1px;padding:16px 26px;border:0;cursor:pointer;text-decoration:none;box-shadow:6px 6px 0 var(--wht);transition:.15s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--wht)}
+.btn.y{background:var(--yel);color:var(--blk);box-shadow:6px 6px 0 var(--red)}
+.btn.wa{background:#1fa855}
+
+/* ticker */
+.ticker{background:var(--yel);color:var(--blk);overflow:hidden;white-space:nowrap;border-block:4px solid var(--blk);transform:rotate(-1.2deg) scale(1.03);margin:-20px 0 40px;position:relative;z-index:3}
+.ticker div{display:inline-block;padding:14px 0;font:400 26px var(--disp);text-transform:uppercase;animation:tick 40s linear infinite}
+.ticker span{margin:0 28px}
+.ticker span:nth-child(even){color:var(--red)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+section{padding:70px 0}
+.sec-h{font-size:clamp(38px,6vw,72px);margin-bottom:14px}
+.sec-h em{font-style:normal;color:var(--red2)}
+.sub{color:var(--mute);font-size:18px;max-width:720px;margin-bottom:34px}
+
+/* caso real */
+.caso{background:var(--wht);color:var(--blk);position:relative}
+.caso .wrap{display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center}
+.caso .date{font:400 clamp(70px,14vw,170px) var(--disp);color:var(--red);line-height:.85}
+.caso .date small{display:block;font-size:.3em;color:var(--blk)}
+.caso h2{font-size:clamp(30px,4.5vw,52px);margin-bottom:12px}
+.caso p{font-size:19px;margin-bottom:10px}
+.caso .src{font-size:13px;color:#555}
+.caso .src a{color:var(--red)}
+
+/* verificador */
+.check{background:linear-gradient(135deg,#1a0004,#0b0b0d 60%)}
+.q{margin-bottom:22px}
+.q h3{font-size:24px;margin-bottom:10px}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opts button{background:transparent;color:var(--wht);border:2px solid #555;font:800 16px Inter;padding:12px 18px;cursor:pointer;transition:.15s}
+.opts button:hover{border-color:var(--wht)}
+.opts button.on{background:var(--wht);color:var(--blk);border-color:var(--wht)}
+.verdict{margin-top:26px;padding:28px;border:4px solid var(--mute);min-height:120px;transition:.3s}
+.verdict.bad{border-color:var(--red2);background:rgba(200,16,32,.18);animation:flash .5s 3}
+.verdict.mid{border-color:var(--yel);background:rgba(255,212,0,.1)}
+.verdict.ok{border-color:#2ecc71;background:rgba(46,204,113,.1)}
+@keyframes flash{50%{background:rgba(255,30,46,.5)}}
+.verdict .big{font-size:clamp(36px,6vw,64px);margin-bottom:8px}
+.verdict.bad .big{color:var(--red2)}.verdict.mid .big{color:var(--yel)}.verdict.ok .big{color:#2ecc71}
+.verdict p{font-size:18px}
+
+/* costos */
+.cost-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cost{background:var(--ink);border-top:6px solid var(--red);padding:26px}
+.cost .n{font:400 clamp(38px,5vw,58px) var(--disp);color:var(--yel)}
+.cost h3{font-size:22px;margin:6px 0 10px}
+.cost p{color:#ccc}
+.cost.last{background:var(--red);border-top-color:var(--wht)}
+.cost.last .n{color:var(--wht)}
+.cost.last p{color:#fff}
+
+/* reglas */
+.rules{counter-reset:r;display:grid;grid-template-columns:repeat(2,1fr);gap:0}
+.rule{counter-increment:r;padding:26px 26px 26px 100px;position:relative;border-bottom:1px solid #2a2a30;opacity:0;transform:translateX(-30px);transition:.6s}
+.rule.in{opacity:1;transform:none}
+.rule::before{content:counter(r,decimal-leading-zero);position:absolute;left:18px;top:18px;font:400 58px var(--disp);color:var(--red2);line-height:1}
+.rule h3{font-size:24px;margin-bottom:6px}
+.rule p{color:#ccc}
+
+/* mitos */
+.mitos{background:var(--wht);color:var(--blk)}
+.mitos .sub{color:#444}
+.mito{display:grid;grid-template-columns:1fr 1fr;border:4px solid var(--blk);margin-bottom:16px;cursor:pointer}
+.mito .m,.mito .v{padding:22px}
+.mito .m{background:#eee}
+.mito .m b,.mito .v b{display:block;font:900 12px Inter;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+.mito .m b{color:#777}
+.mito .m p{font:400 26px var(--disp);text-transform:uppercase;line-height:1.1}
+.mito .v{background:var(--blk);color:var(--wht);position:relative}
+.mito .v b{color:var(--red2)}
+.mito .v p{font-size:17px}
+.mito .v::after{content:attr(data-tap);position:absolute;inset:0;display:grid;place-items:center;background:var(--red);font:400 30px var(--disp);letter-spacing:1px;transition:.35s}
+.mito.open .v::after{opacity:0;pointer-events:none;transform:scale(1.2)}
+
+/* regalos */
+.gifts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.gift{background:var(--ink);padding:24px;border:2px solid #2a2a30;transition:.2s}
+.gift:hover{border-color:var(--yel);transform:translateY(-4px)}
+.gift h3{font-size:22px;color:var(--yel);margin-bottom:8px}
+.gift p{color:#ccc;font-size:15px}
+
+/* pacto */
+.pacto{background:var(--red);text-align:center;position:relative;overflow:hidden}
+.pacto::before{content:"NO ES UN JUGUETE NO ES UN JUGUETE NO ES UN JUGUETE NO ES UN JUGUETE";position:absolute;inset:auto -10% 10px;font:400 120px var(--disp);color:rgba(0,0,0,.12);white-space:nowrap;animation:tick 30s linear infinite}
+.pacto .sec-h{position:relative}
+.pacto .sub{color:#ffe;margin-inline:auto;position:relative}
+.firmas{font:400 clamp(60px,10vw,120px) var(--disp);position:relative}
+.firmas small{display:block;font:800 14px Inter;letter-spacing:2px;text-transform:uppercase}
+.pacto .acts{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:24px;position:relative}
+.pacto .btn{box-shadow:6px 6px 0 var(--blk)}
+
+
+/* galería real */
+.galeria{background:#000}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.gal figure{position:relative;overflow:hidden;background:#111;border:3px solid #222}
+.gal img,.gal video{width:100%;height:340px;object-fit:cover;display:block;transition:transform 6s ease}
+.gal figure:hover img{transform:scale(1.12)}
+.gal figcaption{position:absolute;inset:auto 0 0 0;padding:14px;background:linear-gradient(transparent,rgba(0,0,0,.9));font:800 15px Inter}
+.gal .tag{position:absolute;top:10px;left:10px;background:var(--red);font:900 11px Inter;letter-spacing:2px;padding:4px 8px;text-transform:uppercase}
+
+/* fuentes */
+.fuentes ol{padding-left:20px;color:#ccc}
+.fuentes li{margin-bottom:8px}
+footer{padding:30px 0 60px;border-top:3px solid var(--red);color:var(--mute);font-size:14px;text-align:center}
+footer b{color:var(--wht)}
+
+@media(max-width:820px){
+ .hero-grid,.caso .wrap,.rules,.cost-grid{grid-template-columns:1fr}
+ .gifts{grid-template-columns:1fr 1fr}
+ .flyer{max-width:330px;margin:0 auto;display:block}
+ .mito{grid-template-columns:1fr}
+ .rule{padding-left:84px}
+}
+@media(max-width:480px){.gifts{grid-template-columns:1fr}.count div{min-width:70px}.count b{font-size:34px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <b>NO SON <span>JUGUETES</span></b>
+  <div class="lang"><button id="bES" class="on">ES</button><button id="bEN">EN</button></div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker"><span class="es">Caucasia, Antioquia · Alerta a padres</span><span class="en">Caucasia, Antioquia · Parent alert</span></span>
+      <h1><span class="es">Señor padre, señora madre:</span><span class="en">Dad, Mom:</span>
+        <span class="r es">una moto eléctrica no es un juguete</span><span class="r en">an electric motorbike is not a toy</span></h1>
+      <p class="lead es">Usted la compra como regalo de Navidad. La ley la trata como un vehículo. Y la calle no le perdona nada a un niño de 12 años.</p>
+      <p class="lead en">You buy it as a Christmas gift. The law treats it as a vehicle. And the street forgives nothing to a 12-year-old.</p>
+      <div class="count-lbl"><span class="es">Tiempo que le queda para decidir bien</span><span class="en">Time left to make the right call</span></div>
+      <div class="count" id="count"></div>
+      <a href="#check" class="btn"><span class="es">¿Mi hijo puede manejarla?</span><span class="en">Can my kid ride it?</span></a>
+    </div>
+    <img class="flyer" src="foto-nino-moto.jpg" alt="Niño pequeño manejando una moto eléctrica por la calle">
+  </div>
+</section>
+
+<div class="ticker"><div id="tk"></div></div>
+
+<!-- CASO REAL -->
+<section class="caso">
+  <div class="wrap">
+    <div class="date">27<small class="es">octubre 2026</small><small class="en">October 2026</small></div>
+    <div>
+      <h2 class="es">Esto no es un cuento. Pasó esta semana.</h2>
+      <h2 class="en">This is not a story. It happened this week.</h2>
+      <p class="es">En Fundación, Magdalena, dos hermanas de <b>13 y 9 años</b> cayeron de una moto eléctrica y una volqueta las arrolló. Murieron las dos.</p>
+      <p class="en">In Fundación, Magdalena, two sisters aged <b>13 and 9</b> fell off an electric motorbike and were run over by a dump truck. Both died.</p>
+      <p class="es">Una niña de 13 años no podía manejar ese vehículo por la calle. Tampoco podía llevar a nadie atrás. Las dos cosas las prohíbe la ley desde julio de 2025.</p>
+      <p class="en">A 13-year-old was not allowed to ride that vehicle on the street, nor carry anyone behind her. Both have been banned by law since July 2025.</p>
+      <p class="src"><span class="es">Fuente:</span><span class="en">Source:</span> <a href="https://forumnews.com.co/region-caribe/motos-electricas-menores-de-edad-ley-2486-fundacion/" target="_blank" rel="noopener">Forum News, oct 2026</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- VERIFICADOR -->
+<section class="check" id="check">
+  <div class="wrap">
+    <h2 class="sec-h es">¿Su hijo <em>puede</em> manejarla?</h2>
+    <h2 class="sec-h en">Can your kid <em>legally</em> ride it?</h2>
+    <p class="sub es">Tres preguntas. Respuesta según la Ley 2486 de 2025. Sin rodeos.</p>
+    <p class="sub en">Three questions. Answer based on Colombia's Law 2486 of 2025. No sugar-coating.</p>
+
+    <div class="q"><h3><span class="es">1. ¿Cuántos años tiene?</span><span class="en">1. How old is your child?</span></h3>
+      <div class="opts" data-k="age">
+        <button data-v="u12"><span class="es">Menos de 12</span><span class="en">Under 12</span></button>
+        <button data-v="12"><span class="es">12 a 15</span><span class="en">12 to 15</span></button>
+        <button data-v="16"><span class="es">16 o 17</span><span class="en">16 or 17</span></button>
+      </div></div>
+
+    <div class="q"><h3><span class="es">2. ¿Qué vehículo es?</span><span class="en">2. What kind of vehicle?</span></h3>
+      <div class="opts" data-k="veh">
+        <button data-v="light"><span class="es">Liviano: hasta 1.000 W, menos de 60 kg, máx. 40 km/h</span><span class="en">Light: up to 1,000 W, under 60 kg, max 40 km/h</span></button>
+        <button data-v="moto"><span class="es">Más potente, más pesada o más rápida</span><span class="en">More powerful, heavier or faster</span></button>
+        <button data-v="nose"><span class="es">No sé</span><span class="en">I don't know</span></button>
+      </div></div>
+
+    <div class="q"><h3><span class="es">3. ¿Por dónde va a andar?</span><span class="en">3. Where will they ride?</span></h3>
+      <div class="opts" data-k="via">
+        <button data-v="ciclo"><span class="es">Solo por ciclorruta</span><span class="en">Bike lane only</span></button>
+        <button data-v="calle"><span class="es">Por la calle y el barrio</span><span class="en">Streets and the neighborhood</span></button>
+      </div></div>
+
+    <div class="verdict" id="verdict"><p class="es">Responda las tres preguntas.</p><p class="en">Answer all three questions.</p></div>
+  </div>
+</section>
+
+<!-- COSTOS -->
+<section>
+  <div class="wrap">
+    <h2 class="sec-h es">Lo que le puede <em>costar</em></h2>
+    <h2 class="sec-h en">What it can <em>cost you</em></h2>
+    <p class="sub es">Cada infracción de la Ley 2486 se cobra con una multa de 6 salarios mínimos diarios. Y eso es lo más barato de la lista.</p>
+    <p class="sub en">Every violation of Law 2486 carries a fine of 6 daily minimum wages. And that is the cheapest item on this list.</p>
+    <div class="cost-grid">
+      <div class="cost"><div class="n" data-to="350181">$0</div>
+        <h3 class="es">Multa por cada infracción</h3><h3 class="en">Fine per violation</h3>
+        <p class="es">6 salarios mínimos diarios (en 2026, el diario es $58.363,50). Sin casco, con pasajero, por el andén, sin reflectivo de noche: cada falta cuenta.</p>
+        <p class="en">6 daily minimum wages (in 2026 one day is COP 58,363.50). No helmet, a passenger, on the sidewalk, no reflective gear at night: each one counts.</p></div>
+      <div class="cost"><div class="n"><span class="es">PATIOS</span><span class="en">IMPOUND</span></div>
+        <h3 class="es">La moto se la inmovilizan</h3><h3 class="en">The bike gets impounded</h3>
+        <p class="es">Si la maneja un menor de 16 años, si va sin casco o si el conductor está bajo efectos de alcohol, el agente la inmoviliza. El regalo de Navidad termina en los patios.</p>
+        <p class="en">If someone under 16 rides it, if there's no helmet, or if the rider is under the influence, it gets impounded. The Christmas gift ends up in the lot.</p></div>
+      <div class="cost"><div class="n"><span class="es">USTED</span><span class="en">YOU</span></div>
+        <h3 class="es">Responde por los daños</h3><h3 class="en">You pay for the damage</h3>
+        <p class="es">El Código Civil (art. 2347) hace responder a los padres por lo que hagan sus hijos menores que viven con ellos. Si su hijo atropella a alguien, la cuenta le llega a usted.</p>
+        <p class="en">Colombia's Civil Code (art. 2347) makes parents liable for what their minor children living with them do. If your kid hits someone, the bill comes to you.</p></div>
+    </div>
+    <div class="cost last" style="margin-top:18px">
+      <div class="n"><span class="es">LO QUE NO SE PAGA</span><span class="en">WHAT MONEY CAN'T PAY</span></div>
+      <p class="es" style="font-size:20px">Una pierna, una cabeza, una vida. La de su hijo o la de un vecino. Eso no lo devuelve ningún seguro.</p>
+      <p class="en" style="font-size:20px">A leg, a head, a life. Your child's or a neighbor's. No insurance gives that back.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REGLAS -->
+<section style="background:var(--ink)">
+  <div class="wrap">
+    <h2 class="sec-h es">Lo que dice <em>la ley</em></h2>
+    <h2 class="sec-h en">What <em>the law</em> says</h2>
+    <p class="sub es">Ley 2486 de 2025, vigente desde el 16 de julio de 2025. Aplica en Caucasia igual que en Bogotá.</p>
+    <p class="sub en">Law 2486 of 2025, in force since July 16, 2025. It applies in Caucasia the same as in Bogotá.</p>
+    <div class="rules">
+      <div class="rule"><h3><span class="es">16 años cumplidos</span><span class="en">16 years old, minimum</span></h3><p class="es">Es la edad mínima para conducirla. Si la maneja alguien menor, la inmovilizan.</p><p class="en">That is the minimum age. If someone younger rides it, it gets impounded.</p></div>
+      <div class="rule"><h3><span class="es">De 12 a 15: solo ciclorruta</span><span class="en">Ages 12–15: bike lanes only</span></h3><p class="es">Nada de calles, nada de barrio. ¿Cuántas ciclorrutas conoce usted en Caucasia? Si no hay ciclorruta, su hijo no tiene por dónde andar legalmente.</p><p class="en">No streets, no neighborhood. How many bike lanes do you know in Caucasia? With no bike lane, your child has nowhere to ride legally.</p></div>
+      <div class="rule"><h3><span class="es">Menor de 12: nunca</span><span class="en">Under 12: never</span></h3><p class="es">La ley no le deja ninguna puerta abierta.</p><p class="en">The law leaves no door open.</p></div>
+      <div class="rule"><h3><span class="es">Casco siempre</span><span class="en">Helmet, always</span></h3><p class="es">Sin casco: multa e inmovilización.</p><p class="en">No helmet: fine and impound.</p></div>
+      <div class="rule"><h3><span class="es">Una sola persona</span><span class="en">One rider only</span></h3><p class="es">Prohibido llevar al hermanito, al primo o a la amiga si el vehículo no está diseñado para eso.</p><p class="en">No little brother, cousin or friend on the back unless the vehicle is designed for it.</p></div>
+      <div class="rule"><h3><span class="es">Nunca por el andén</span><span class="en">Never on the sidewalk</span></h3><p class="es">Los andenes son de los peatones. Multa.</p><p class="en">Sidewalks belong to pedestrians. Fine.</p></div>
+      <div class="rule"><h3><span class="es">25 km/h · 40 km/h</span><span class="en">25 km/h · 40 km/h</span></h3><p class="es">Tope de 25 en ciclorruta y 40 en las vías permitidas.</p><p class="en">Top speed 25 on bike lanes and 40 on permitted roads.</p></div>
+      <div class="rule"><h3><span class="es">Si es más potente, es una moto</span><span class="en">If it's more powerful, it's a motorcycle</span></h3><p class="es">Por encima de 1.000 W, 60 kg o 40 km/h ya no es "liviana": pide licencia, SOAT y placa. Manejarla sin licencia es infracción con inmovilización.</p><p class="en">Above 1,000 W, 60 kg or 40 km/h it's no longer "light": it needs a license, mandatory insurance (SOAT) and plates. Riding without a license means a ticket and impound.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MITOS -->
+<section class="mitos">
+  <div class="wrap">
+    <h2 class="sec-h es">Lo que dicen <em>en el barrio</em></h2>
+    <h2 class="sec-h en">What people <em>say</em></h2>
+    <p class="sub es">Toque cada tarjeta para ver la verdad.</p>
+    <p class="sub en">Tap each card to see the truth.</p>
+    <div id="mitos"></div>
+  </div>
+</section>
+
+<!-- REGALOS -->
+<section>
+  <div class="wrap">
+    <h2 class="sec-h es">Regale <em>vida</em>, no riesgo</h2>
+    <h2 class="sec-h en">Give <em>life</em>, not risk</h2>
+    <p class="sub es">Ideas para que la Navidad igual sea grande.</p>
+    <p class="sub en">Ideas so Christmas is still big.</p>
+    <div class="gifts">
+      <div class="gift"><h3><span class="es">Bicicleta y casco</span><span class="en">Bike and helmet</span></h3><p class="es">Ejercicio, libertad y a una velocidad que un niño sí controla.</p><p class="en">Exercise, freedom, and a speed a kid can actually handle.</p></div>
+      <div class="gift"><h3><span class="es">Una promesa a los 16</span><span class="en">A promise for 16</span></h3><p class="es">Escríbale una carta: "a los 16, con curso y casco, hablamos". Que la espera también sea el regalo.</p><p class="en">Write a letter: "at 16, with a course and a helmet, we'll talk." Let the wait be part of the gift.</p></div>
+      <div class="gift"><h3><span class="es">Un curso o un deporte</span><span class="en">A class or a sport</span></h3><p class="es">Natación, fútbol, música, programación. Algo que le dure toda la vida.</p><p class="en">Swimming, soccer, music, coding. Something that lasts a lifetime.</p></div>
+      <div class="gift"><h3><span class="es">Tiempo con usted</span><span class="en">Time with you</span></h3><p class="es">Un paseo al río, un día de pesca, una salida en familia. Eso es lo que recuerdan.</p><p class="en">A day at the river, fishing, a family outing. That's what they remember.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PACTO -->
+<section class="pacto">
+  <div class="wrap">
+    <h2 class="sec-h es">Firme el pacto</h2>
+    <h2 class="sec-h en">Sign the pledge</h2>
+    <p class="sub es">"En mi casa, ningún menor de 16 años maneja moto eléctrica por la calle. Yo respondo."</p>
+    <p class="sub en">"In my home, no one under 16 rides an electric motorbike on the street. I'm responsible."</p>
+    <div class="firmas"><span id="nf">0</span><small class="es">padres firmaron en este teléfono</small><small class="en">parents signed on this phone</small></div>
+    <div class="acts">
+      <button class="btn y" id="firmar"><span class="es">Me comprometo</span><span class="en">I pledge</span></button>
+      <a class="btn wa" id="wa" target="_blank" rel="noopener"><span class="es">Mandar a WhatsApp</span><span class="en">Share on WhatsApp</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA: fotos y videos reales, se cargan desde media.json -->
+<section class="galeria" id="galeria" hidden>
+  <div class="wrap">
+    <h2 class="sec-h es">Mírelo con <em>sus ojos</em></h2>
+    <h2 class="sec-h en">See it with <em>your own eyes</em></h2>
+    <p class="sub es">Fotos y videos reales. Esto es lo que se ve en las calles.</p>
+    <p class="sub en">Real photos and videos. This is what's out on the streets.</p>
+    <div class="gal" id="gal"></div>
+  </div>
+</section>
+
+<!-- FUENTES -->
+<section class="fuentes">
+  <div class="wrap">
+    <h2 class="sec-h" style="font-size:36px"><span class="es">Fuentes</span><span class="en">Sources</span></h2>
+    <ol>
+      <li><a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=260802" target="_blank" rel="noopener">Ley 2486 de 2025 — Función Pública</a></li>
+      <li><a href="https://mintransporte.gov.co/info/mintransporte/media/anexos/qXTMOhBd.pdf" target="_blank" rel="noopener">Ministerio de Transporte — concepto sobre la Ley 2486</a></li>
+      <li><a href="https://siemprealdia.co/colombia/derecho-laboral/salario-minimo-2026/" target="_blank" rel="noopener">Salario mínimo 2026 (Decreto 1469 de 2025)</a></li>
+      <li><a href="https://forumnews.com.co/region-caribe/motos-electricas-menores-de-edad-ley-2486-fundacion/" target="_blank" rel="noopener">Forum News — caso Fundación, Magdalena</a></li>
+      <li><a href="https://cambiocolombia.com/pais/articulo/2026/4/que-reglas-debe-cumplir-patineta-bicicleta-moto-electrica-pequena-colombia" target="_blank" rel="noopener">Cambio — reglas para motos eléctricas pequeñas</a></li>
+    </ol>
+  </div>
+</section>
+
+<footer>
+  <b>Vibras Positivas HM</b> · Caucasia, Antioquia · <span id="hora"></span><br>
+  <span class="es">Campaña ciudadana. No es una entidad oficial de tránsito.</span><span class="en">Citizen campaign. Not an official traffic authority.</span>
+</footer>
+
+<script>
+const URL_APP='https://motos-no-son-juguetes.netlify.app';
+const TZ='America/Bogota';
+const $=s=>document.querySelector(s);
+let lang=(()=>{try{return localStorage.getItem('nsj-lang')||'es'}catch(e){return 'es'}})();
+function setLang(l){lang=l;document.body.classList.toggle('en',l==='en');document.documentElement.lang=l;
+  $('#bES').classList.toggle('on',l==='es');$('#bEN').classList.toggle('on',l==='en');
+  try{localStorage.setItem('nsj-lang',l)}catch(e){} buildTicker();buildMitos();verdict();waLink();buildGal();}
+$('#bES').onclick=()=>setLang('es');$('#bEN').onclick=()=>setLang('en');
+
+/* Cuenta regresiva a Nochebuena, hora de Colombia (UTC-5 fijo) */
+function countdown(){
+  const now=Date.now();
+  let y=+new Intl.DateTimeFormat('en',{timeZone:TZ,year:'numeric'}).format(now);
+  let target=Date.UTC(y,11,24,5,0,0); /* 24 dic 00:00 en Bogotá */
+  if(now>target+86400000*2) target=Date.UTC(y+1,11,24,5,0,0);
+  let d=Math.max(0,target-now);
+  const D=Math.floor(d/864e5),H=Math.floor(d%864e5/36e5),M=Math.floor(d%36e5/6e4),S=Math.floor(d%6e4/1e3);
+  const L=lang==='en'?['days','hours','min','sec']:['días','horas','min','seg'];
+  $('#count').innerHTML=[D,H,M,S].map((v,i)=>`<div><b>${String(v).padStart(2,'0')}</b><small>${L[i]}</small></div>`).join('');
+  $('#hora').textContent=new Intl.DateTimeFormat(lang==='en'?'en-US':'es-CO',{timeZone:TZ,dateStyle:'full',timeStyle:'short'}).format(now)+(lang==='en'?' (Colombia time)':' (hora Colombia)');
+}
+setInterval(countdown,1000);
+
+/* Ticker */
+const TK={es:['No es un juguete','16 años cumplidos','De 12 a 15: solo ciclorruta','Menor de 12: nunca','Casco siempre','Un solo pasajero: el que maneja','Multa de 6 salarios diarios','Inmovilización inmediata','Usted responde por los daños','Fundación: dos niñas muertas'],
+ en:['Not a toy','16 years minimum','Ages 12–15: bike lanes only','Under 12: never','Helmet always','One rider only','Fine: 6 daily wages','Immediate impound','You pay for the damage','Fundación: two girls dead']};
+function buildTicker(){const t=TK[lang].map(x=>`<span>${x}</span>`).join('');$('#tk').innerHTML=t+t;}
+
+/* Mitos */
+const MITOS={es:[
+ ['Es eléctrica, no es una moto','La ley la regula como vehículo: edad mínima, casco, velocidad, multas e inmovilización. Si pasa de 1.000 W, 60 kg o 40 km/h, es una moto con licencia, SOAT y placa.'],
+ ['Es solo para dar vueltas en el barrio','El barrio es vía pública. Entre 12 y 15 años solo se permite en ciclorruta. Por la calle del barrio, no.'],
+ ['Yo voy al lado vigilándolo','Ir a su lado no cambia la ley ni detiene una volqueta. La edad mínima es la misma con o sin papá al lado.'],
+ ['La multa es de 10 millones, eso no lo cobran','Falso. La ley dice 6 salarios mínimos DIARIOS, unos $350.000 en 2026. Es real, es cobrable, y además le inmovilizan la moto.'],
+ ['A mi hijo no le va a pasar','Eso pensaban en Fundación. Dos hermanas de 13 y 9 años, una moto eléctrica y una volqueta.']],
+ en:[
+ ['It\'s electric, it\'s not a motorbike','The law treats it as a vehicle: minimum age, helmet, speed limits, fines and impound. Above 1,000 W, 60 kg or 40 km/h it is a motorcycle needing license, insurance and plates.'],
+ ['It\'s just for riding around the block','The block is a public road. Ages 12–15 are only allowed on bike lanes. Not on neighborhood streets.'],
+ ['I walk next to them and watch','Walking next to them doesn\'t change the law or stop a dump truck. The minimum age is the same with or without a parent nearby.'],
+ ['The fine is 10 million, nobody charges that','False. The law says 6 DAILY minimum wages, about COP 350,000 in 2026. It\'s real, it gets charged, and the bike gets impounded too.'],
+ ['It won\'t happen to my kid','That\'s what they thought in Fundación. Two sisters, 13 and 9, an electric motorbike and a dump truck.']]};
+function buildMitos(){
+  const tap=lang==='en'?'TAP FOR THE TRUTH':'TOQUE PARA VER LA VERDAD';
+  $('#mitos').innerHTML=MITOS[lang].map(([m,v])=>`<div class="mito"><div class="m"><b>${lang==='en'?'Myth':'Mito'}</b><p>"${m}"</p></div><div class="v" data-tap="${tap}"><b>${lang==='en'?'Truth':'Verdad'}</b><p>${v}</p></div></div>`).join('');
+  document.querySelectorAll('.mito').forEach(e=>e.onclick=()=>e.classList.toggle('open'));
+}
+
+/* Verificador */
+const A={};
+document.querySelectorAll('.opts').forEach(g=>g.querySelectorAll('button').forEach(b=>b.onclick=()=>{
+  g.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');A[g.dataset.k]=b.dataset.v;verdict();}));
+function verdict(){
+  const v=$('#verdict');const en=lang==='en';
+  if(!A.age||!A.veh||!A.via){v.className='verdict';v.innerHTML=`<p>${en?'Answer all three questions.':'Responda las tres preguntas.'}</p>`;return;}
+  let c='bad',t,p;
+  if(A.age==='u12'){t=en?'NO. Period.':'NO. Punto.';p=en?'Under 12 there is no legal way to ride it. If they do, it gets impounded and you answer for any damage.':'Menor de 12 años no tiene ninguna forma legal de manejarla. Si lo hace, se la inmovilizan y usted responde por cualquier daño.';}
+  else if(A.veh!=='light'){t=en?'NO. That\'s a motorcycle.':'NO. Eso es una moto.';p=A.veh==='nose'?(en?'If you don\'t know the power, weight and speed, you don\'t know what you\'re handing your child. Check the spec sheet before buying: above 1,000 W, 60 kg or 40 km/h it needs a license, insurance and plates.':'Si no sabe la potencia, el peso y la velocidad, no sabe qué le está entregando a su hijo. Pida la ficha técnica antes de comprar: por encima de 1.000 W, 60 kg o 40 km/h exige licencia, SOAT y placa.'):(en?'Above the light-vehicle limits it needs a driver\'s license, SOAT and plates. Riding it without a license means a ticket and impound.':'Por encima de los límites de vehículo liviano exige licencia de conducción, SOAT y placa. Manejarla sin licencia es comparendo e inmovilización.');}
+  else if(A.age==='12'&&A.via==='calle'){t=en?'NO on the street.':'NO por la calle.';p=en?'Ages 12 to 15 may only ride on bike lanes. On the street: impound. And ask yourself where the bike lane near your house is.':'De 12 a 15 años solo puede andar por ciclorruta. Por la calle: inmovilización. Y pregúntese dónde queda la ciclorruta cerca de su casa.';}
+  else if(A.age==='12'){c='mid';t=en?'Only on the bike lane':'Solo en ciclorruta';p=en?'Legal only on bike infrastructure, max 25 km/h, with a certified helmet, alone, no passengers. If there\'s no bike lane where you live, the answer is no.':'Es legal solo en ciclo-infraestructura, máximo 25 km/h, con casco, solo, sin pasajeros. Si donde vive no hay ciclorruta, la respuesta es no.';}
+  else{c='ok';t=en?'Yes, with rules':'Sí, con reglas';p=en?'At 16 it\'s allowed: helmet always, reflective gear at night, one rider, never on the sidewalk, max 40 km/h on the road. Each violation: 6 daily minimum wages.':'A los 16 se permite: casco siempre, reflectivo de noche, una sola persona, nunca por el andén, máximo 40 km/h en vía. Cada falta: 6 salarios mínimos diarios.';}
+  v.className='verdict '+c;v.innerHTML=`<div class="big">${t}</div><p>${p}</p>`;
+}
+
+/* Contadores animados y aparición de reglas */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;
+  if(el.dataset.to){const to=+el.dataset.to,t0=performance.now();(function f(t){const k=Math.min(1,(t-t0)/1400);el.textContent='$'+Math.round(to*(1-Math.pow(1-k,3))).toLocaleString('es-CO');if(k<1)requestAnimationFrame(f)})(t0)}
+  else el.classList.add('in');io.unobserve(el);}),{threshold:.3});
+document.querySelectorAll('[data-to],.rule').forEach(e=>io.observe(e));
+
+
+/* Galería desde media.json */
+let MEDIA=[];
+async function loadMedia(){try{const r=await fetch('media.json?v='+Date.now());MEDIA=await r.json();}catch(e){MEDIA=[]}buildGal();}
+function buildGal(){const g=$('#gal');if(!g)return;if(!MEDIA.length){$('#galeria').hidden=true;return;}
+ $('#galeria').hidden=false;
+ g.innerHTML=MEDIA.map(m=>{const cap=(lang==='en'?m.en:m.es)||'';const tag=m.tipo==='video'?(lang==='en'?'Video':'Video'):(lang==='en'?'Photo':'Foto');
+  const el=m.tipo==='video'?`<video src="${m.src}" ${m.poster?`poster="${m.poster}"`:''} muted loop playsinline autoplay preload="metadata"></video>`:`<img src="${m.src}" alt="${cap}" loading="lazy">`;
+  return `<figure><span class="tag">${tag}</span>${el}<figcaption>${cap}</figcaption></figure>`}).join('');}
+
+/* Pacto */
+function getN(){try{return +localStorage.getItem('nsj-firmas')||0}catch(e){return 0}}
+$('#nf').textContent=getN();
+$('#firmar').onclick=()=>{let n=getN()+1;try{localStorage.setItem('nsj-firmas',n)}catch(e){}$('#nf').textContent=n;
+  $('#firmar').innerHTML=lang==='en'?'Signed. Now share it.':'Firmado. Ahora compártalo.';};
+function waLink(){const m=lang==='en'
+ ?`DAD, MOM: an electric motorbike is NOT a Christmas toy. Under 16 can't ride it on the street (Law 2486/2025). Look at this before you buy: ${URL_APP}`
+ :`SEÑOR PADRE, SEÑORA MADRE: una moto eléctrica NO es un juguete de Navidad. Un menor de 16 no puede manejarla por la calle (Ley 2486 de 2025). Mire esto antes de comprarla: ${URL_APP}`;
+ $('#wa').href='https://wa.me/?text='+encodeURIComponent(m);}
+
+setLang(lang);countdown();loadMedia();
+if('serviceWorker' in navigator){try{navigator.serviceWorker.register('sw.js').catch(()=>{})}catch(e){}}
+</script>
+</body>
+</html>
